@@ -33,12 +33,17 @@ namespace API.Controllers
     public async Task<ActionResult> AddItemToBasket(int productId, int quantity)
     {
       var basket = await RetrieveBasket();
+
       if (basket == null) basket = CreateBasket();
+
       var product = await _context.Products.FindAsync(productId);
+
       if (product == null) return NotFound();
+
       basket.AddItems(product, quantity);
 
       var result = await _context.SaveChangesAsync() > 0;
+      
       if (result) return StatusCode(201);
 
       return BadRequest(new ProblemDetails { Title = "Problems saving to basket" });

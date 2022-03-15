@@ -43,7 +43,7 @@ namespace API.Controllers
       basket.AddItems(product, quantity);
 
       var result = await _context.SaveChangesAsync() > 0;
-      
+
       if (result) return StatusCode(201);
 
       return BadRequest(new ProblemDetails { Title = "Problems saving to basket" });
@@ -57,6 +57,13 @@ namespace API.Controllers
       // get basket
       // remove item or decrament
       // save changes
+
+      // bellow code is just to stop error
+      await _context.Baskets
+       .Include(i => i.Items)
+       .ThenInclude(p => p.Product)
+       .FirstOrDefaultAsync(x => x.BuyerId == Request.Cookies["buyerId"]);
+       
       return Ok();
     }
 

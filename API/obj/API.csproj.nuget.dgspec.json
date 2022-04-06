@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/Sonny/web-apps/dotnet/API/API.csproj": {}
+    "/Users/Sonny/webapps/dotnetproj/API/API.csproj": {}
   },
   "projects": {
-    "/Users/Sonny/web-apps/dotnet/API/API.csproj": {
+    "/Users/Sonny/webapps/dotnetproj/API/API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/Sonny/web-apps/dotnet/API/API.csproj",
+        "projectUniqueName": "/Users/Sonny/webapps/dotnetproj/API/API.csproj",
         "projectName": "API",
-        "projectPath": "/Users/Sonny/web-apps/dotnet/API/API.csproj",
+        "projectPath": "/Users/Sonny/webapps/dotnetproj/API/API.csproj",
         "packagesPath": "/Users/Sonny/.nuget/packages/",
-        "outputPath": "/Users/Sonny/web-apps/dotnet/API/obj/",
+        "outputPath": "/Users/Sonny/webapps/dotnetproj/API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/Sonny/.nuget/NuGet/NuGet.Config"
